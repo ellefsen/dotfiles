@@ -5,7 +5,7 @@ echo "Setting up your environment..."
 apt-get update \
     && apt-get install -y curl zip unzip git software-properties-common wget \
     && apt-get update \
-    && LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+    && LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php \
     && apt-get update \
     && apt-get install -y php7.3-cli php7.3-gd php7.3-mysql \
         php7.3-pgsql php7.3-imap php-memcached php7.3-mbstring php7.3-xml php7.3-curl \

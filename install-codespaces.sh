@@ -16,13 +16,7 @@ apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Install PHP CS Fixer
-curl -L https://cs.symfony.com/download/php-cs-fixer-v2.phar -o php-cs-fixer
-chmod a+x php-cs-fixer
-mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
-# Symlink PHP CS
-ln -s $HOME/.dotfiles/.php_cs $HOME/.php_cs
 
 # Install Oh-My-Zsh
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
@@ -34,3 +28,13 @@ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
+
+# Install PHP CS Fixer
+curl -L https://cs.symfony.com/download/php-cs-fixer-v2.phar -o php-cs-fixer
+chmod a+x php-cs-fixer
+mv php-cs-fixer /usr/local/bin/php-cs-fixer
+
+# Symlink PHP CS
+ln -s $HOME/.dotfiles/.php_cs $HOME/.php_cs
+
+composer global require squizlabs/php_codesniffer

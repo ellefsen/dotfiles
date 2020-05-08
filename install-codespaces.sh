@@ -17,8 +17,8 @@ apt-get update \
 
 # Install PHP CS Fixer
 curl -L https://cs.symfony.com/download/php-cs-fixer-v2.phar -o php-cs-fixer
-sudo chmod a+x php-cs-fixer
-sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+chmod a+x php-cs-fixer
+mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
 # Symlink PHP CS
 ln -s $HOME/.dotfiles/.php_cs $HOME/.php_cs

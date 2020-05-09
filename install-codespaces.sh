@@ -20,6 +20,7 @@ apt-get update \
 
 # Install Oh-My-Zsh
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+chsh -s $(which zsh)
 
 # TODO: Add .zshrc
 
@@ -38,3 +39,7 @@ mv php-cs-fixer /usr/local/bin/php-cs-fixer
 ln -s $HOME/.dotfiles/.php_cs $HOME/.php_cs
 
 composer global require squizlabs/php_codesniffer
+
+# Install Fast NVM
+curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+

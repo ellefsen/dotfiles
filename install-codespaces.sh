@@ -16,13 +16,12 @@ apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-
+# TODO: Add .zshrc
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 # Install Oh-My-Zsh
-curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
-
-# TODO: Add .zshrc
 
 # Install Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

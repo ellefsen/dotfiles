@@ -41,4 +41,4 @@ composer global require squizlabs/php_codesniffer
 
 # Install Fast NVM
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
-
+source /root/.zshrc

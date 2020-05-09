@@ -42,3 +42,7 @@ composer global require squizlabs/php_codesniffer
 # Install Fast NVM
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
 source /root/.zshrc
+
+# Set 12.04 as default.
+fnm install v12.14.0
+fnm default v12.14.0

@@ -3,7 +3,7 @@
 echo "Setting up your environment..."
 
 apt-get update \
-    && apt-get install -y curl zip unzip git software-properties-common wget \
+    && apt-get install -y curl zip unzip git software-properties-common wget zsh \
     && apt-get update \
     && LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php \
     && apt-get update \
@@ -20,7 +20,7 @@ apt-get update \
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 # Install Oh-My-Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
 
 # Install Composer

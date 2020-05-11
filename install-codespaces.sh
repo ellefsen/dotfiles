@@ -16,9 +16,6 @@ apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# TODO: Add .zshrc
-ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
-
 # Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
@@ -41,8 +38,10 @@ composer global require squizlabs/php_codesniffer
 
 # Install Fast NVM
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
-source /root/.zshrc
 
 # Set 12.04 as default.
 fnm install v12.14.0
 fnm default v12.14.0
+
+# Set theme for zsh
+sed -i 's/robbyrussell/steeef/g'

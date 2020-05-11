@@ -98,7 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$HOME/.fnm:$PATH"
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-
-eval "`fnm env --multi --use-on-cd`"
+# fnm
+export PATH=/root/.fnm:$PATH
+eval "`fnm env --multi`"
